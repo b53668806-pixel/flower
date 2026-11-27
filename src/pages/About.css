@@ -1,0 +1,658 @@
+/* src/pages/About.css */
+
+/* ==========================================================================
+   1. ABOUT HERO SEKSIYASI
+   ========================================================================== */
+.about-page {
+  overflow-x: hidden;
+}
+
+.about-hero {
+  background: var(--gradient-blush);
+  padding: 68px 0 60px;
+  border-bottom: 1px solid var(--border-gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::after {
+  content: '';
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: rgba(217, 123, 147, 0.14);
+  bottom: -160px;
+  left: -90px;
+  pointer-events: none;
+}
+
+.about-hero-inner {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero-title {
+  font-size: clamp(2.15rem, 4.1vw, 3.15rem);
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.about-hero-title span {
+  color: var(--color-forest);
+  font-style: italic;
+}
+
+.about-hero-subtitle {
+  font-size: 1.04rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/* ==========================================================================
+   2. HIKOYAMIZ (RASM + MATN)
+   ========================================================================== */
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.about-story-media {
+  position: relative;
+}
+
+.about-story-main-img {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 4 / 4.5;
+  border: 6px solid var(--bg-white);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-story-main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-story-badge {
+  position: absolute;
+  bottom: -22px;
+  right: -18px;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  max-width: 310px;
+}
+
+.about-story-badge svg {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 14px;
+  background: var(--gradient-forest);
+  color: var(--color-gold-light);
+  flex-shrink: 0;
+}
+
+.about-story-badge strong {
+  display: block;
+  font-size: 0.98rem;
+  color: var(--text-dark);
+}
+
+.about-story-badge span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.about-story-content p {
+  font-size: 0.98rem;
+  color: var(--text-body);
+  line-height: 1.78;
+  margin-bottom: 18px;
+}
+
+.about-story-highlights {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.story-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.story-highlight-item svg {
+  color: var(--color-forest);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   3. MISSIYA VA QADRIYATLAR KARTALARI
+   ========================================================================== */
+.about-values-section {
+  background: var(--bg-soft);
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.about-value-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px;
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.about-value-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-gold);
+}
+
+.about-value-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: var(--color-blush-soft);
+  color: var(--color-rose-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  margin-bottom: 18px;
+  border: 1px solid var(--border-rose);
+}
+
+.about-value-card h3 {
+  font-size: 1.18rem;
+  margin-bottom: 10px;
+}
+
+.about-value-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   4. JAMOA A'ZOLARI (6 KISHI)
+   ========================================================================== */
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.team-member-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.team-member-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-gold);
+}
+
+.team-member-photo {
+  position: relative;
+  aspect-ratio: 4 / 3.8;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+
+.team-member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.team-member-card:hover .team-member-photo img {
+  transform: scale(1.06);
+}
+
+.team-exp-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(27, 59, 43, 0.92);
+  color: var(--color-gold-light);
+  font-size: 0.76rem;
+  font-weight: 600;
+  border: 1px solid rgba(200, 161, 82, 0.35);
+}
+
+.team-member-info {
+  padding: 22px 24px 26px;
+}
+
+.team-member-info h3 {
+  font-size: 1.24rem;
+  margin-bottom: 4px;
+}
+
+.team-member-role {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-rose-dark);
+  margin-bottom: 12px;
+}
+
+.team-member-info p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.64;
+}
+
+/* ==========================================================================
+   5. YUTUQLAR TIMELINE & SIFAT KAFOLATI
+   ========================================================================== */
+.about-timeline-section {
+  background: linear-gradient(180deg, var(--bg-blush-tint) 0%, var(--bg-cream) 100%);
+}
+
+.milestones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 64px;
+}
+
+.milestone-card {
+  padding: 28px 24px;
+  background: var(--bg-white);
+  position: relative;
+}
+
+.milestone-year {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--gradient-forest);
+  color: var(--color-gold-light);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.milestone-card h3 {
+  font-size: 1.12rem;
+  margin-bottom: 10px;
+}
+
+.milestone-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* Sifat kafolati bloki */
+.quality-box {
+  background: var(--bg-white);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: 44px 40px;
+  box-shadow: var(--shadow-md);
+}
+
+.quality-box-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.quality-box-header h2 {
+  font-size: clamp(1.65rem, 3vw, 2.2rem);
+}
+
+.quality-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.quality-step-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: var(--bg-cream);
+  border: 1px solid var(--border-light);
+}
+
+.quality-step-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  color: var(--text-light);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quality-step-card h3 {
+  font-size: 1.08rem;
+  margin-bottom: 6px;
+}
+
+.quality-step-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   6. KONTAKT BLOKI VA FORMA
+   ========================================================================== */
+.about-contact-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.contact-info-card {
+  background: var(--gradient-forest);
+  color: var(--text-light);
+  border-radius: var(--radius-xl);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-info-card h3 {
+  font-size: 1.65rem;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+
+.contact-info-desc {
+  font-size: 0.94rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.contact-details-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contact-detail-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(200, 161, 82, 0.35);
+  color: var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.contact-details-list strong {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--color-gold-light);
+  margin-bottom: 2px;
+}
+
+.contact-details-list span,
+.contact-details-list a {
+  font-size: 0.94rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-details-list a:hover {
+  color: var(--color-gold-light);
+}
+
+.contact-studio-preview {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid rgba(200, 161, 82, 0.35);
+  aspect-ratio: 16 / 8.5;
+}
+
+.contact-studio-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Form Card */
+.contact-form-card {
+  padding: 40px 38px;
+  background: var(--bg-white);
+}
+
+.contact-form-card h3 {
+  font-size: 1.65rem;
+  margin-bottom: 8px;
+}
+
+.contact-form-sub {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  margin-bottom: 26px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.form-row-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-light);
+  background: var(--bg-cream);
+  font-size: 0.94rem;
+  color: var(--text-dark);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.form-control:focus {
+  background: var(--bg-white);
+  border-color: var(--color-forest);
+  box-shadow: 0 0 0 4px rgba(27, 59, 43, 0.08);
+}
+
+.form-control.has-error {
+  border-color: var(--color-danger);
+  background: #fff8f9;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 112px;
+}
+
+.form-error-text {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-danger);
+}
+
+.form-success-banner {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(46, 125, 82, 0.1);
+  border: 1px solid rgba(46, 125, 82, 0.3);
+  color: var(--color-success);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-success-banner svg {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   7. YAKUNIY CTA SEKSIYASI
+   ========================================================================== */
+.about-final-cta {
+  padding: 16px 0 88px;
+}
+
+.about-cta-card {
+  background: linear-gradient(135deg, #1b3b2b 0%, #11261b 100%);
+  border-radius: var(--radius-xl);
+  padding: 56px 36px;
+  text-align: center;
+  color: var(--text-light);
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-cta-card h2 {
+  font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+  color: var(--text-light);
+  max-width: 680px;
+  margin: 0 auto 14px;
+}
+
+.about-cta-card p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 540px;
+  margin: 0 auto 28px;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (1200px, 992px, 768px, 480px)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .about-values-grid,
+  .milestones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .about-story-grid,
+  .about-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .about-story-badge {
+    right: 14px;
+    bottom: -16px;
+  }
+
+  .about-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quality-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 48px 0 44px;
+  }
+
+  .quality-box {
+    padding: 32px 22px;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    padding: 30px 24px;
+  }
+
+  .form-row-two {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-values-grid,
+  .about-team-grid,
+  .milestones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story-badge {
+    position: static;
+    margin-top: 16px;
+    max-width: 100%;
+  }
+
+  .about-cta-card {
+    padding: 40px 20px;
+  }
+}
